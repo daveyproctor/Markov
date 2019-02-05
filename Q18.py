@@ -1,6 +1,6 @@
 import numpy as np
 from Markov import Markov_process
-np.random.seed(100)
+np.random.seed(101)
 
 class rth_success(Markov_process):
     """
@@ -23,6 +23,8 @@ class rth_success(Markov_process):
         Markov_process.__init__(self, states, Q, accept_states)
 
 if __name__ == "__main__":
-    game = rth_success(2, .2)
+    game = rth_success(5, .6)
     print(game.sample_game())
-    print(game.sim_avg(n=1000))
+    print(game.sample_game())
+    print(game.sample_game(stop=20))
+    # print(game.sim_avg(n=1000))

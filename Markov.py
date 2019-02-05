@@ -14,7 +14,7 @@ class Markov_process(object):
         # need the indices
         self.accept_states = np.array([i for i,s in enumerate(states) if s in accept_states], dtype=int)
 
-    def sample_game(self, s=None, stop=1):
+    def sample_game(self, s=None, stop=5):
         """Starting from distribution s (state 0 by default)
         simulates a game till accept state.
         returns array of each named state visited"""

@@ -1,6 +1,6 @@
 import networkx as nx
 import numpy as np
-from graph_viz import graph
+import graphVizWrapper
 from Markov import Markov_process
 
 np.random.seed(10)
@@ -16,7 +16,7 @@ def sim(n=4, m=15):
     I_graph.add_edge("LinkedIn", "HCP")
 
     # visualize
-    graph(I_graph.edges(), 'di')
+    graphVizWrapper.graph(I_graph.edges(), 'di')
 
     # google transition matrix
     G = nx.google_matrix(I_graph, alpha=1.0)
