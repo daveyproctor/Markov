@@ -1,5 +1,10 @@
 digraph {
-	FB -> HCP
-	Amazon -> HCP
-	LinkedIn -> HCP
+	"Not B Not C" -> "Not B Not C"
+	"Not B Not C" -> "B Only"
+	"Not B Not C" -> "C Only"
+	"Not B Not C" -> "B and C"
+	"B Only" -> "B Only"
+	"B Only" -> "B and C"
+	"C Only" -> "C Only"
+	"C Only" -> "B and C"
 }
