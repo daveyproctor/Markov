@@ -33,6 +33,7 @@ class Markov_process(object):
                 break
             row = self.Q[state]
             # where to next?
+            # could abstract this to Markov_process.step()
             state = np.random.choice(range(len(row)), p=row)
         states = np.array(states, dtype=int)
         return self.named_states[states]
